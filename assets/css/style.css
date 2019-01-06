@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300');
+
+*,:after,
+:before  {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 10pt;
+}
+
+body {
+  /*Fuente*/
+  font-family:'Source Sans Pro', Helvetica, sans-serif;
+  vertical-align: baseline;
+  font-size: 1rem;
+	line-height: 1.6;
+
+  /*Estilo*/
+  background-color: #ffffff;
+  color: #000000;
+  margin: 0;
+  padding: 0;
+  border: 0px;
+}
+
+/*---------------------------HEADERS---------------------------*/
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 300;
+  line-height: 1.4;
+  letter-spacing: -0.05em;
+  /*margin: top right bottom left*/
+  margin: 0 0 1rem 0;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3.5rem;
+}
+
+h2 {
+  font-size: 2.25rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.1rem;
+}
+
+h5 {
+  font-size: 0.9rem;
+}
+
+h6 {
+  font-size: 0.7rem;
+}
+
+/*---------------------------PARAGRAPHS---------------------------*/
+p {
+  /*margin: top right bottom left*/
+  margin: 0 0.2rem 2rem 1rem;
+}
+
+p.major {
+  font-size: 1.2rem;
+}
+
+
+/*---------------------------BUTTON---------------------------*/
+ul{
+  /*Quitar bullet*/
+  list-style: none;
+}
+
+.button {
+  /*---TRANSITION HOVER---*/
+  /*Firefox*/
+  -moz-transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
+  /*Chrome y Safari*/
+  -webkit-transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
+  /*Opera*/
+  -o-transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
+
+  /*---APARIENCIA---*/
+  border: 0;
+  cursor: pointer;
+  display: inline-block;
+  min-width: 14em;
+  background-color: transparent;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2);
+  color: #000000 !important;
+
+
+  /*font*/
+  font-weight: 400;
+  letter-spacing: 0.125em;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  /*Size*/
+  max-width: 20rem;
+  height: 3.8em;
+  line-height: 3.75em;
+  border-radius: 3.8em;
+  padding: 0 2.5em;
+  /*Display del texto dentro del button*/
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.button:hover {
+  box-shadow: inset 0 0 0 1px #47D3E5;
+  color: #47D3E5 !important;
+}
+
+.button:active {
+  background-color: rgba(71, 211, 229, 0.2);
+  box-shadow: inset 0 0 0 1px #47D3E5;
+  color: #47D3E5 !important;
+}
+
+/*---------------------------IMAGE---------------------------*/
+.image {
+  border: 0;
+  border-radius: 4px;
+  display: inline-block;
+  /*Posicion relativa a su posicion en una pagina estatica*/
+  position: relative;
+}
+
+.image img {
+  display: block;
+  width: 100%;
+}
+
+/*---------------------------SECTION 1---------------------------*/
+section{
+  height: 100vh;
+  width: 100%;
+}
+
+.container{
+  display: flex;
+  /*direction*/
+  flex-direction: column;
+  -moz-flex-direction: column;
+  -webkit-flex-direction: column;
+  /*align*/
+  align-items: center;
+  -webkit-align-items: center; /* Safari 7.0+ */
+}
+
+/*---------------------------SCROLL DOWN---------------------------*/
+
+
+@media screen and (min-width: 736px) {}
+
+@media screen and (min-width: 1280px) {}
+
+@media screen and (min-width: 1680px) {}
