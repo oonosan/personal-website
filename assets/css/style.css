@@ -242,16 +242,12 @@ ul {
 }
 
 /*---------------------------SKILLS---------------------------*/
-
-
 .cv-wrap {
-  display: flex;
-  align-items: center;
   margin-bottom: 100px;
 }
 
 .languages {
-  width: 50vw;
+  width: 100vw;
   /*Ocultar barra de progreso en overflow*/
   overflow: hidden;
 }
@@ -271,6 +267,12 @@ ul {
   margin-right: 10px;
   position: relative;
   top: 9px;
+}
+
+/*---------------------------CV DESCRIPTION---------------------------*/
+.cv-description {
+  width: 100vw;
+  margin-top: 20px;
 }
 
 /*---------------------------BARRA DE PROGRESO---------------------------*/
@@ -301,33 +303,23 @@ progress[value]::-webkit-progress-value {
   background-size: 35px 20px, 100% 100%, 100% 100%;
 }
 
-/*---------------------------CV DESCRIPTION---------------------------*/
-.cv-description {
-  width: 50%;
-  margin-top: 20px;
-}
-
 /*---------------------------PROYECTOS---------------------------*/
 .portfolio{
   height: auto;
 }
 
-.projects{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
 .project{
-  width: 40vw;
+  width: 80vw;
   height: 300px;
-  margin: 5px 5px;
+  margin: auto;
+  margin-bottom: 10px;
   text-align: center;
 }
 
 .project p, .project h2{
   color:white;
 }
+
 
 /*---------------------------FOOTER---------------------------*/
 #contact ul{
@@ -429,7 +421,39 @@ progress[value]::-webkit-progress-value {
 
 
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 600px) {
+  /*---------------------------SKILLS---------------------------*/
+  .cv-wrap {
+    display: flex;
+    align-items: center;
+    margin-bottom: 100px;
+  }
+
+  .languages {
+    width: 50vw;
+    /*Ocultar barra de progreso en overflow*/
+    overflow: hidden;
+  }
+
+  .cv-description {
+    width: 50%;
+    margin-top: 20px;
+  }
+
+  /*---------------------------PROYECTOS---------------------------*/
+  .projects{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .project{
+    width: 45vw;
+    height: 300px;
+    margin: 5px 5px;
+    text-align: center;
+  }
+
 
 }
 
