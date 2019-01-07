@@ -1,7 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300');
 
-*, :after,
-:before {
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('../fonts/fontawesome-webfont.eot?v=4.7.0');
+  src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('../fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal
+}
+
+*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -67,11 +74,94 @@ p.major {
   font-size: 1.2rem;
 }
 
+/*---------------------------MENU---------------------------*/
+header{
+  position: fixed;
+  width: 100%;
+  /*Para que este arriba del resto de los elementos de la pagina*/
+  z-index: 100;
+}
+
+.header-container{
+  width:90%;
+  position: relative;
+  margin: 1rem auto;
+}
+
+/*Barra horizontal del medio del boton de menu*/
+.header-button {
+  /*Ancho de la barra del boton*/
+  width: 2rem;
+  /*Grosor de la barra del boton*/
+  height: 0.2rem;
+  /*Color de la barra*/
+  background: #000;
+  position: absolute;
+  top: 2rem;
+  transition: all 0.4s;
+  cursor: pointer;
+}
+
+/*Creamos las otras dos barras del boton de menu*/
+.header-button::before,
+.header-button::after {
+  content: "";
+  width: 2rem;
+  height: 0.2rem;
+  background: #000;
+  position: absolute;
+  top: -0.6rem;
+  transition: all 0.2s;
+}
+
+/*3ra Barra del boton del menu*/
+.header-button::after {
+  top: 0.6rem;
+}
+
+.menu {
+  background: #d1d1d1;
+  width: 100%;
+  height: 10rem;
+  position: fixed;
+  z-index: 9;
+  top: -12rem;
+  text-align: center;
+  padding-top: 2rem;
+  transition: all 0.5s;
+}
+
+.checkbox {
+  display: none;
+}
+
+.checkbox:checked ~ .menu {
+  background: rgba(198,189,189,0.6);
+  top: 0rem;
+
+}
+.checkbox:checked + header .header-container label .header-button {
+  background: none;
+}
+.checkbox:checked + header .header-container label .header-button::before {
+  top: 0;
+}
+.checkbox:checked + header .header-container label .header-button::after {
+  top: 0;
+}
+
+a {
+  margin: 0 1rem;
+  color: #000;
+  text-decoration: none;
+}
+
 /*---------------------------BUTTON---------------------------*/
 ul {
   /*Quitar bullet*/
   list-style: none;
 }
+
 
 .button {
   /*---TRANSITION HOVER---*/
@@ -120,6 +210,7 @@ ul {
   color: #47D3E5 !important;
 }
 
+
 /*---------------------------IMAGE---------------------------*/
 .image {
   border: 0;
@@ -153,17 +244,17 @@ section {
 }
 
 /*---------------------------SKILLS---------------------------*/
-.cv{
+.cv {
   height: auto;
 }
 
 .cv-wrap {
   display: flex;
+  align-items: center;
   margin-bottom: 100px;
 }
 
 .languages {
-  align-items: flex-start;
   width: 50vw;
   /*Ocultar barra de progreso en overflow*/
   overflow: hidden;
@@ -173,13 +264,17 @@ section {
   /*Alinear verticalmente*/
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
+
+  margin-top: 15px;
   margin-left: 10px;
+  height: auto;
 }
 
-.icon {
+.icon-language {
   width: 30px;
   margin-right: 10px;
+  position: relative;
+  top: 9px;
 }
 
 /*---------------------------BARRA DE PROGRESO---------------------------*/
@@ -205,8 +300,7 @@ progress[value]::-webkit-progress-value {
     rgba(255, 255, 255, .25),
     rgba(0, 0, 0, .25)),
     /* for left to right color variation*/
-    -webkit-linear-gradient(left,#1A181B, #BCB8B1);
-
+    -webkit-linear-gradient(left, #1A181B, #BCB8B1);
   border-radius: 2px;
   background-size: 35px 20px, 100% 100%, 100% 100%;
 }
@@ -214,7 +308,130 @@ progress[value]::-webkit-progress-value {
 /*---------------------------CV DESCRIPTION---------------------------*/
 .cv-description {
   width: 50%;
+  margin-top: 20px;
 }
+
+/*---------------------------PROYECTOS---------------------------*/
+.portfolio{
+  height: auto;
+}
+
+.projects{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.project{
+  width: 40vw;
+  height: 300px;
+  margin: 5px 5px;
+  text-align: center;
+}
+
+.project p, .project h2{
+  color:white;
+}
+
+/*---------------------------FOOTER---------------------------*/
+#contact ul{
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+
+  height: 100px;
+  align-items: center;
+}
+
+/*---------------------------TOOLTIP---------------------------*/
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 2px 0;
+  height: 2rem;
+  font-size: 12px;
+
+  /* Position the tooltip */
+  /*Tooltip on the bottom by default*/
+  position: absolute;
+  z-index: 10;
+
+  /*Tooltip on the bottom
+  top: 100%;
+  left: 50%;
+  margin-left: -60px;*/ /* Use half of the width (120/2 = 60), to center the tooltip */
+
+  /*Tooltip on the Right
+  top: -5px;
+  left: 105%;*/
+
+  /*Tooltip on the left
+  top: -5px;
+  right: 105%; */
+
+  /*Tooltip on the top*/
+  bottom: 60%;
+  left: 50%;
+  margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
+
+  /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 0.5;
+}
+
+/*Bottom arrow*/
+.tooltip .tooltiptext::after {
+  content: " ";
+  position: absolute;
+  /*Position the arrow inside the tooltip: top: 100% will place the arrow at
+  the bottom of the tooltip. left: 50% will center the arrow.*/
+  top: 100%;
+  left: 50%;
+
+  /*The border-width property specifies the size of the arrow.
+  If you change this, also change the margin-left value to the same.
+  This will keep the arrow centered.*/
+  margin-left: -5px;
+  border-width: 5px;
+
+  /*The border-color is used to transform the content into an arrow.
+  We set the top border to black, and the rest to transparent.
+  If all sides were black, you would end up with a black square box.*/
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+
+  /*LEFT ARROW
+  top: 50%;
+  right: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent black transparent transparent;*/
+
+  /*RIGHT ARROW
+  top: 50%;
+  left: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent transparent black;*/
+}
+
+
 
 @media screen and (min-width: 375px) {
   h1 {
