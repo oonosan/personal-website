@@ -12,7 +12,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-size: 10pt;
 }
 
 body {
@@ -40,7 +39,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   text-align: center;
-  font-size: 3.5rem;
+  font-size: 3rem;
   margin-top: 10px;
 }
 
@@ -71,7 +70,7 @@ p {
 }
 
 p.major {
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 /*---------------------------MENU---------------------------*/
@@ -226,9 +225,8 @@ ul {
 }
 
 /*---------------------------SECTION---------------------------*/
-section {
-  height: 100vh;
-  width: 100%;
+.welcome {
+  min-height: 100vh;
 }
 
 .container {
@@ -244,9 +242,7 @@ section {
 }
 
 /*---------------------------SKILLS---------------------------*/
-.cv {
-  height: auto;
-}
+
 
 .cv-wrap {
   display: flex;
@@ -433,10 +429,8 @@ progress[value]::-webkit-progress-value {
 
 
 
-@media screen and (min-width: 375px) {
-  h1 {
-    font-size: 40px;
-  }
+@media screen and (min-width: 768px) {
+
 }
 
 @media screen and (min-width: 1280px) {}
