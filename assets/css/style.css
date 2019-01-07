@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300');
 
-*,:after,
-:before  {
+*, :after,
+:before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -10,11 +10,10 @@
 
 body {
   /*Fuente*/
-  font-family:'Source Sans Pro', Helvetica, sans-serif;
+  font-family: 'Source Sans Pro', Helvetica, sans-serif;
   vertical-align: baseline;
   font-size: 1rem;
-	line-height: 1.6;
-
+  line-height: 1.6;
   /*Estilo*/
   background-color: #ffffff;
   color: #000000;
@@ -35,6 +34,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   text-align: center;
   font-size: 3.5rem;
+  margin-top: 10px;
 }
 
 h2 {
@@ -67,9 +67,8 @@ p.major {
   font-size: 1.2rem;
 }
 
-
 /*---------------------------BUTTON---------------------------*/
-ul{
+ul {
   /*Quitar bullet*/
   list-style: none;
 }
@@ -83,7 +82,6 @@ ul{
   /*Opera*/
   -o-transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
   transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
-
   /*---APARIENCIA---*/
   border: 0;
   cursor: pointer;
@@ -92,8 +90,6 @@ ul{
   background-color: transparent;
   box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2);
   color: #000000 !important;
-
-
   /*font*/
   font-weight: 400;
   letter-spacing: 0.125em;
@@ -138,13 +134,13 @@ ul{
   width: 100%;
 }
 
-/*---------------------------SECTION 1---------------------------*/
-section{
+/*---------------------------SECTION---------------------------*/
+section {
   height: 100vh;
   width: 100%;
 }
 
-.container{
+.container {
   display: flex;
   /*direction*/
   flex-direction: column;
@@ -152,13 +148,79 @@ section{
   -webkit-flex-direction: column;
   /*align*/
   align-items: center;
-  -webkit-align-items: center; /* Safari 7.0+ */
+  -webkit-align-items: center;
+  /* Safari 7.0+ */
 }
 
-/*---------------------------SCROLL DOWN---------------------------*/
+/*---------------------------SKILLS---------------------------*/
+.cv{
+  height: auto;
+}
 
+.cv-wrap {
+  display: flex;
+  margin-bottom: 100px;
+}
 
-@media screen and (min-width: 736px) {}
+.languages {
+  align-items: flex-start;
+  width: 50vw;
+  /*Ocultar barra de progreso en overflow*/
+  overflow: hidden;
+}
+
+.language {
+  /*Alinear verticalmente*/
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+.icon {
+  width: 30px;
+  margin-right: 10px;
+}
+
+/*---------------------------BARRA DE PROGRESO---------------------------*/
+progress[value] {
+  /* Reset the default appearance */
+  -webkit-appearance: none;
+  appearance: none;
+  width: 35vw;
+}
+
+/*The container*/
+progress[value]::-webkit-progress-bar {
+  background-color: #eee;
+  border-radius: 2px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+
+/*The bar*/
+progress[value]::-webkit-progress-value {
+  background-image:
+    /* for top to bottom shadowing*/
+    -webkit-linear-gradient(top,
+    rgba(255, 255, 255, .25),
+    rgba(0, 0, 0, .25)),
+    /* for left to right color variation*/
+    -webkit-linear-gradient(left,#1A181B, #BCB8B1);
+
+  border-radius: 2px;
+  background-size: 35px 20px, 100% 100%, 100% 100%;
+}
+
+/*---------------------------CV DESCRIPTION---------------------------*/
+.cv-description {
+  width: 50%;
+}
+
+@media screen and (min-width: 375px) {
+  h1 {
+    font-size: 40px;
+  }
+}
 
 @media screen and (min-width: 1280px) {}
 

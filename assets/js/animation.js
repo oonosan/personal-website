@@ -6,3 +6,12 @@ $(function() {
     return false;
   });
 });
+
+$(function() {
+  $('.scroll-down-cv').click(function() {
+    $('html, body').animate({
+      scrollTop: $('section.portfolio').offset().top
+    }, 'slow');
+    return false;
+  });
+});
