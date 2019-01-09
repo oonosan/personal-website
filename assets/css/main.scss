@@ -232,13 +232,16 @@ header{
 }
 
 
-/*---------------------------IMAGE---------------------------*/
+
+/*---------------------------WELCOME---------------------------*/
+.welcome {
+  min-height: 100vh;
+}
+
+/*---------------------------Profile picture---------------------------*/
 .image {
   border: 0;
-  border-radius: 4px;
   display: inline-block;
-  /*Posicion relativa a su posicion en una pagina estatica*/
-  position: relative;
 }
 
 .image img {
@@ -246,11 +249,7 @@ header{
   width: 100%;
 }
 
-/*---------------------------SECTION---------------------------*/
-.welcome {
-  min-height: 100vh;
-}
-
+/*---------------------------Container---------------------------*/
 .container {
   display: flex;
   /*direction*/
