@@ -3,11 +3,26 @@ $colors: (
     site-text-color: #000000,
     menu-button-color: #000000,
     menu-background-color:rgba(198,189,189,0.6),
-    menu-link-color: #000000
+    menu-link-color: #000000,
+    see-more-button-boder-color: inset 0 0 0 1px rgba(0, 0, 0, 0.2),
+    see-more-button-text-color: #000000 !important,
+    see-more-button-boder-color-hover: inset 0 0 0 1px #47D3E5,
+    see-more-button-text-color-hover: #47D3E5 !important,
+    see-more-button-background-active: rgba(71, 211, 229, 0.2)
+);
+
+$font:(
+  see-more-button-font-weight: 500em,
+  see-more-button-text-spacing: 0.125em,
+  see-more-button-font-size: 0.75rem
 );
 
 @function color($color-name){
     @return map-get($colors,$color-name)
+}
+
+@function font($font-variable){
+  @return map-get($font, $font-variable);
 }
 
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300');
@@ -161,13 +176,7 @@ header{
 
       
   }
-
-
-
-
-
-
-
+  
 /*---------------------------SEE MORE BUTTON---------------------------*/
 .button {
   /*---TRANSITION HOVER---*/
@@ -183,36 +192,43 @@ header{
   border: 0;
   cursor: pointer;
   display: inline-block;
-  min-width: 14em;
-  color: #000000 !important;
-  /*font*/
-  font-weight: 400;
-  letter-spacing: 0.125em;
+  background-color: transparent;
+  /*Border color*/
+  -webkit-box-shadow: color(see-more-button-boder-color);
+  box-shadow: color(see-more-button-boder-color);
+
+  /*Text*/
+  color: color(see-more-button-text-color);
+  font-size: font(see-more-button-font-size);
+  font-weight: font(see-more-button-text-weight);
+  letter-spacing: font(see-more-button-text-spacing);
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 0.75rem;
+  
   /*Size*/
+  min-width: 14em;
   max-width: 20rem;
   height: 3.8em;
   line-height: 3.75em;
   border-radius: 3.8em;
   padding: 0 2.5em;
-  /*Display del texto dentro del button*/
+
+  /*Display text inside button*/
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
 
 .button:hover {
-  box-shadow: inset 0 0 0 1px #47D3E5;
-  color: #47D3E5 !important;
+  box-shadow: font(see-more-button-boder-color-hover);
+  color: font(see-more-button-text-color-hover);
 }
 
 .button:active {
-  background-color: rgba(71, 211, 229, 0.2);
-  box-shadow: inset 0 0 0 1px #47D3E5;
-  color: #47D3E5 !important;
+  background-color: font(see-more-button-background-active);
+  box-shadow: font(see-more-button-boder-color-hover);
+  color: font(see-more-button-text-color-hover);
 }
 
 
