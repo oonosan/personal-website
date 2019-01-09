@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 $(function() {
   $('.scroll-down-home').click(function() {
     $('html, body').animate({
@@ -34,7 +33,7 @@ $(function() {
     return false;
   });
 });
-=======
+
 $(function() {
   $('.scroll-down-home').click(function() {
     $('html, body').animate({
@@ -70,4 +69,3 @@ $(function() {
     return false;
   });
 });
->>>>>>> 29a3e05b95bd9257e691f52ea3b6b3af5800242b
