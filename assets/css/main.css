@@ -359,6 +359,7 @@ progress[value]::-webkit-progress-value {
   /*Tooltip on the bottom by default*/
   position: absolute;
   z-index: 10;
+<<<<<<< HEAD
   /*Tooltip on the bottom
   top: 100%;
   left: 50%;
@@ -369,6 +370,18 @@ progress[value]::-webkit-progress-value {
   left: 105%;*/
   /*Tooltip on the left
   top: -5px;
+=======
+  /*Tooltip on the bottom
+  top: 100%;
+  left: 50%;
+  margin-left: -60px;*/
+  /* Use half of the width (120/2 = 60), to center the tooltip */
+  /*Tooltip on the Right
+  top: -5px;
+  left: 105%;*/
+  /*Tooltip on the left
+  top: -5px;
+>>>>>>> 29a3e05b95bd9257e691f52ea3b6b3af5800242b
   right: 105%; */
   /*Tooltip on the top*/
   bottom: 60%;
@@ -390,6 +403,7 @@ progress[value]::-webkit-progress-value {
 .tooltip .tooltiptext::after {
   content: " ";
   position: absolute;
+<<<<<<< HEAD
   /*Position the arrow inside the tooltip: top: 100% will place the arrow at
   the bottom of the tooltip. left: 50% will center the arrow.*/
   top: 100%;
@@ -417,6 +431,35 @@ progress[value]::-webkit-progress-value {
   margin-top: -5px;
   border-width: 5px;
   border-style: solid;
+=======
+  /*Position the arrow inside the tooltip: top: 100% will place the arrow at
+  the bottom of the tooltip. left: 50% will center the arrow.*/
+  top: 100%;
+  left: 50%;
+  /*The border-width property specifies the size of the arrow.
+  If you change this, also change the margin-left value to the same.
+  This will keep the arrow centered.*/
+  margin-left: -5px;
+  border-width: 5px;
+  /*The border-color is used to transform the content into an arrow.
+  We set the top border to black, and the rest to transparent.
+  If all sides were black, you would end up with a black square box.*/
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+  /*LEFT ARROW
+  top: 50%;
+  right: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent black transparent transparent;*/
+  /*RIGHT ARROW
+  top: 50%;
+  left: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+>>>>>>> 29a3e05b95bd9257e691f52ea3b6b3af5800242b
   border-color: transparent transparent transparent black;*/
 }
 
