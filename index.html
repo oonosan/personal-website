@@ -42,7 +42,7 @@
   <header>
     <div class="header-container">
       <label for="btn-nav">
-        <div class="header-button"></div>
+        <span class="header-button"></span>
       </label>
     </div>
   </header>
@@ -51,7 +51,7 @@
   <nav class="menu">
     <ul>
       <li><a href="#welcome" class="scroll-down-home">Home</a></li>
-      <li><a href="#cv" class="scroll-down">CV</a></li>
+      <li><a href="#cv" class="scroll-down">Sobre mí</a></li>
       <li><a href="#portfolio" class="scroll-down-portfolio">Proyectos</a></li>
       <li><a href="#contact" class="scroll-down-contact">Contacto</a></li>
     </ul>
@@ -60,9 +60,10 @@
   <!-- INTRO -->
   <main id="welcome" class="welcome">
     <!-- Imagen -->
-    <section class="image">
-      <img src="images/banner.jpg" alt="Foto de perfil" />
-    </section>
+    <figure class="image">
+      <img src="images/banner.jpg" alt="Foto de Karen Ono"/>
+      <figcaption>Karen Ono</figcaption>
+    </figure>
 
     <article class="container intro">
       <h1>Hola!!</h1>
@@ -79,9 +80,10 @@
 
   <!-- CV -->
   <section id="cv" class="cv">
-    <h1>Conocimientos</h1>
+    <h1>Sobre mí</h1>
     <div class="cv-wrap">
       <article class="container languages">
+        <h3>Conocimientos</h3>
         <!-- HTML5 -->
         <div class="language tooltip">
           <span class="tooltiptext">HTML5</span>
@@ -174,11 +176,13 @@
       </article>
 
       <article class="container cv-description">
+        <h3>CV</h3>
         <p class="major">
           Recientemente decidí cambiarme a lo que más me apasiona, Ingeniería Informática.<br>
           Tengo conocimientos básicos de algoritmos, programación y diseño web.
         </p>
         <ul>
+          <li><a href="#" class="button">Descargar CV</a></li>
           <li><a href="#portfolio" class="button scroll-down-portfolio">Ver Proyectos</a></li>
         </ul>
       </article>
