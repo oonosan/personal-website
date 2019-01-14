@@ -1,10 +1,10 @@
-@import "variables.scss";
-@import "common.scss";
-@import "sections/menu.scss";  
-@import "sections/welcome.scss";
-@import "sections/about-me.scss";
-@import "sections/projects.scss";
-@import "sections/footer.scss";
+@import "partials/_variables.scss";
+@import "partials/_common.scss";
+@import "partials/_menu.scss";  
+@import "partials/_welcome.scss";
+@import "partials/_about-me.scss";
+@import "partials/_projects.scss";
+@import "partials/_footer.scss";
 
 
 @media screen and (min-width: 600px) {
