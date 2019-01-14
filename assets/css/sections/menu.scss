@@ -1,0 +1,84 @@
+/*---------------------------MENU---------------------------*/
+.checkbox {
+    display: none;
+  } 
+
+header{
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+  }
+
+.header-container{
+    width:90%;
+    position: relative;
+    margin: 1rem auto;
+  }
+
+  /*Checkbox appearance*/
+  /*Menu button's horizontal middle line*/
+.header-button {
+  width: 2rem;
+  height: 0.2rem;
+  background: color(menu-button-color);
+  position: absolute;
+  top: 2rem;
+  transition: all 0.4s;
+  cursor: pointer;
+}
+
+/*Two other horizontal lines of the menu's button*/
+.header-button::before,
+.header-button::after {
+  content: "";
+  width: 2rem;
+  height: 0.2rem;
+  background: color(menu-button-color);
+  position: absolute;
+  top: -0.6rem;
+  transition: all 0.2s;
+}
+
+/*3rd horizontal line*/
+.header-button::after {
+  top: 0.6rem;
+}
+
+/*When the checkbox/menu button is checked, the menu drops down*/
+.checkbox:checked ~ .menu {
+  background: color(menu-background-color);
+  top: 0rem;
+}
+
+/*Menu button when the menu is dropped down*/
+.checkbox:checked + header .header-container label .header-button {
+  background: none;
+}
+.checkbox:checked + header .header-container label .header-button::before {
+  top: 0;
+}
+.checkbox:checked + header .header-container label .header-button::after {
+  top: 0;
+}
+
+.menu {
+    /*Color you see when the menu is dropping down*/
+    background: color(menu-background-color);
+    width: 100%;
+    height: 10rem;
+    position: fixed;
+    z-index: 1;
+    /*Hides the menu*/
+    top: -10rem;
+    text-align: center;
+    padding-top: 2rem;
+    transition: all 0.5s;
+
+    a {
+        margin: 0 1rem;
+        color: color(menu-link-color);
+        text-decoration: none;
+      }
+
+      
+  }

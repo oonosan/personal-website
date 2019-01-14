@@ -1,0 +1,148 @@
+/*---------------------------ABOUT ME---------------------------*/
+.cv-wrap {
+    margin-bottom: 100px;
+  }
+  
+  /*---------------------------Languages---------------------------*/
+  .languages {
+    width: 100vw;
+    overflow: hidden;
+  }
+  
+  .language {
+    display: flex;
+    align-items: center;
+  
+    margin-top: 15px;
+    margin-left: 10px;
+    height: auto;
+  }
+  
+  .icon-language {
+    width: 30px;
+    margin-right: 10px;
+    position: relative;
+    top: 9px;
+  }
+  
+  /*---------------------------Tooltip---------------------------*/
+  .tooltip {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: color(tooltip-background-color);
+    color: color(tooltip-text-color);
+    text-align: center;
+    border-radius: 6px;
+    padding: 2px 0;
+    height: 2rem;
+    font-size: 12px;
+  
+    /* Position the tooltip */
+    /*Tooltip on the bottom by default*/
+    position: absolute;
+    z-index: 10;
+  
+    /*Tooltip on the bottom
+    top: 100%;
+    left: 50%;
+    margin-left: -60px;*/ /* Use half of the width (120/2 = 60), to center the tooltip */
+  
+    /*Tooltip on the Right
+    top: -5px;
+    left: 105%;*/
+  
+    /*Tooltip on the left
+    top: -5px;
+    right: 105%; */
+  
+    /*Tooltip on the top*/
+    bottom: 60%;
+    left: 50%;
+    margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
+  
+    /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+    opacity: 0;
+    transition: opacity 1s;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 0.5;
+  }
+  
+  /*Bottom arrow*/
+  .tooltip .tooltiptext::after {
+    content: " ";
+    position: absolute;
+    /*Position the arrow inside the tooltip: top: 100% will place the arrow at
+    the bottom of the tooltip. left: 50% will center the arrow.*/
+    top: 100%;
+    left: 50%;
+  
+    /*The border-width property specifies the size of the arrow.
+    If you change this, also change the margin-left value to the same.
+    This will keep the arrow centered.*/
+    margin-left: -5px;
+    border-width: 5px;
+  
+    /*The border-color is used to transform the content into an arrow.
+    We set the top border to black, and the rest to transparent.
+    If all sides were black, you would end up with a black square box.*/
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+  
+    /*LEFT ARROW
+    top: 50%;
+    right: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent black transparent transparent;*/
+  
+    /*RIGHT ARROW
+    top: 50%;
+    left: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent black;*/
+  }
+  
+  /*---------------------------Progress bar---------------------------*/
+  progress[value] {
+    /* Reset the default appearance */
+    -webkit-appearance: none;
+    appearance: none;
+    width: 35vw;
+  }
+  
+  /*The container*/
+  progress[value]::-webkit-progress-bar {
+    background-color: #eee;
+    border-radius: 2px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+  }
+  
+  /*The bar*/
+  progress[value]::-webkit-progress-value {
+    background-image:
+      /* for top to bottom shadowing*/
+      -webkit-linear-gradient(top,
+      rgba(255, 255, 255, .25),
+      rgba(0, 0, 0, .25)),
+      /* for left to right color variation*/
+      -webkit-linear-gradient(left, #1A181B, #BCB8B1);
+    border-radius: 2px;
+    background-size: 35px 20px, 100% 100%, 100% 100%;
+  }
+  
+  /*---------------------------CV description---------------------------*/
+  .cv-description {
+    width: 100vw;
+    margin-top: 20px;
+  }

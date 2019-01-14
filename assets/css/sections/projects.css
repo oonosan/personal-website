@@ -1,0 +1,29 @@
+/*---------------------------PROJECTS---------------------------*/
+.portfolio {
+  height: auto;
+}
+
+.project {
+  width: 80vw;
+  min-height: 200px;
+  height: auto;
+  margin: auto;
+  margin-bottom: 10px;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.project p {
+  color: color(project-text-color);
+  margin-bottom: 8px;
+}
+
+.project h2 {
+  color: color(project-text-color);
+}
+
+.project a {
+  color: color(project-link-color);
+  margin: 0px;
+}
+/*# sourceMappingURL=projects.css.map */
