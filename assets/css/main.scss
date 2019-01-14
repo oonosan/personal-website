@@ -11,18 +11,18 @@ $colors: (
     see-more-button-background-active: rgba(71, 211, 229, 0.2)
 );
 
-$font:(
+$fonts:(
   see-more-button-font-weight: 500em,
   see-more-button-text-spacing: 0.125em,
   see-more-button-font-size: 0.75rem
 );
 
 @function color($color-name){
-    @return map-get($colors,$color-name)
+    @return map-get($colors,$color-name);
 }
 
 @function font($font-variable){
-  @return map-get($font, $font-variable);
+  @return map-get($fonts, $font-variable);
 }
 
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300');
@@ -220,21 +220,17 @@ header{
   overflow: hidden;
 }
 
+/*What?*/
 .button:hover {
-  box-shadow: font(see-more-button-boder-color-hover);
-  color: font(see-more-button-text-color-hover);
+  box-shadow: color(see-more-button-boder-color-hover);
+  color: color(see-more-button-text-color-hover);
 }
 
 .button:active {
-  background-color: font(see-more-button-background-active);
-  box-shadow: font(see-more-button-boder-color-hover);
-  color: font(see-more-button-text-color-hover);
+  background-color: color(see-more-button-background-active);
+  box-shadow: color(see-more-button-boder-color-hover);
+  color: color(see-more-button-text-color-hover);
 }
-
-
-
-
-
 
 
 
@@ -248,11 +244,14 @@ header{
 .image {
   border: 0;
   display: inline-block;
-}
+  figcaption{
+    display: none;
+  }
 
-.image img {
-  display: block;
-  width: 100%;
+  img {
+    display: block;
+    width: 100%;
+  }
 }
 
 /*---------------------------Container---------------------------*/
@@ -268,19 +267,19 @@ header{
   /* Safari 7.0+ */
 }
 
-/*---------------------------SKILLS---------------------------*/
+
+/*---------------------------ABOUT ME---------------------------*/
 .cv-wrap {
   margin-bottom: 100px;
 }
 
+/*---------------------------Languages---------------------------*/
 .languages {
   width: 100vw;
-  /*Ocultar barra de progreso en overflow*/
   overflow: hidden;
 }
 
 .language {
-  /*Alinear verticalmente*/
   display: flex;
   align-items: center;
 
@@ -296,13 +295,7 @@ header{
   top: 9px;
 }
 
-/*---------------------------CV DESCRIPTION---------------------------*/
-.cv-description {
-  width: 100vw;
-  margin-top: 20px;
-}
-
-/*---------------------------BARRA DE PROGRESO---------------------------*/
+/*---------------------------Progress bar---------------------------*/
 progress[value] {
   /* Reset the default appearance */
   -webkit-appearance: none;
@@ -329,6 +322,16 @@ progress[value]::-webkit-progress-value {
   border-radius: 2px;
   background-size: 35px 20px, 100% 100%, 100% 100%;
 }
+
+/*---------------------------CV description---------------------------*/
+.cv-description {
+  width: 100vw;
+  margin-top: 20px;
+}
+
+
+
+
 
 /*---------------------------PROYECTOS---------------------------*/
 .portfolio{
