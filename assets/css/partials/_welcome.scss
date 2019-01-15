@@ -1,12 +1,22 @@
 /*---------------------------WELCOME---------------------------*/
 .welcome {
-    min-height: 100vh;
-  }
-  
+    height: 100vh;
+
+    @include tablet{
+      display: flex;
+      flex-direction: row;
+    }
+}
+
   /*---------------------------Profile picture---------------------------*/
   .image {
     border: 0;
     display: inline-block;
+
+    @include tablet{
+      width:50vw;
+    }
+
     figcaption{
       display: none;
     }
@@ -20,6 +30,8 @@
   /*---------------------------Container---------------------------*/
   .container {
     display: flex;
+    width: 100wh;
+
     /*direction*/
     flex-direction: column;
     -moz-flex-direction: column;
@@ -27,5 +39,9 @@
     /*align*/
     align-items: center;
     -webkit-align-items: center;
-    /* Safari 7.0+ */
+
+    @include tablet{
+      width:50vw;
+      justify-content: center;
+    }
   }

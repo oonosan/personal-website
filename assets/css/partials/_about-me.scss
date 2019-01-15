@@ -1,6 +1,17 @@
 /*---------------------------ABOUT ME---------------------------*/
+.cv{
+  h2{
+    display: none;
+  }
+}
+
 .cv-wrap {
     margin-bottom: 100px;
+
+    @include tablet{
+      display: flex;
+      margin-bottom: 100px;
+    }
   }
   
   /*---------------------------Languages---------------------------*/
@@ -18,6 +29,18 @@
     height: auto;
   }
   
+  .group-icon{
+    width: 60vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border: 1px solid red;
+
+    @include tablet{
+      width: 60%;
+    }
+  }
+
   .icon-language {
     width: 30px;
     margin-right: 10px;

@@ -2,19 +2,34 @@
 .portfolio{
     height: auto;
   }
-  
+
+  .projects{
+    @include tablet{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+  }
+
   .project{
     width: 80vw;
     min-height: 200px;
     height: auto;
     margin: auto;
     margin-bottom: 10px;
-    text-align: center;
     padding-bottom: 10px;
+    text-align: center;
   
+    @include tablet{
+      width: 45vw;
+      margin: 5px 5px;
+    }
+
     p{
       color:color(project-text-color);
       margin-bottom: 8px;
+      text-align: left;
     }
   
     h2{

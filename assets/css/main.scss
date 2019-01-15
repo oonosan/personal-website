@@ -1,48 +1,7 @@
-@import "partials/_variables.scss";
-@import "partials/_common.scss";
-@import "partials/_menu.scss";  
-@import "partials/_welcome.scss";
-@import "partials/_about-me.scss";
-@import "partials/_projects.scss";
-@import "partials/_footer.scss";
-
-
-@media screen and (min-width: 600px) {
-  /*---------------------------SKILLS---------------------------*/
-  .cv-wrap {
-    display: flex;
-    align-items: center;
-    margin-bottom: 100px;
-  }
-
-  .languages {
-    width: 50vw;
-    /*Ocultar barra de progreso en overflow*/
-    overflow: hidden;
-  }
-
-  .cv-description {
-    width: 50%;
-    margin-top: 20px;
-  }
-
-  /*---------------------------PROYECTOS---------------------------*/
-  .projects{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .project{
-    width: 45vw;
-    height: 300px;
-    margin: 5px 5px;
-    text-align: center;
-  }
-
-
-}
-
-@media screen and (min-width: 1280px) {}
-
-@media screen and (min-width: 1680px) {}
+@import "partials/variables";
+@import "partials/common";
+@import "partials/menu";  
+@import "partials/welcome";
+@import "partials/about-me";
+@import "partials/projects";
+@import "partials/footer";
