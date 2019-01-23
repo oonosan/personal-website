@@ -1,7 +1,13 @@
 /*---------------------------ABOUT ME---------------------------*/
 .cv{
+  margin: auto;
+  
   h2{
     display: none;
+  }
+
+  @include desktop{
+    max-width: 1200px;
   }
 }
 

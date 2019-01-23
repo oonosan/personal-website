@@ -55,12 +55,8 @@ ul {
   list-style: none;
 }
 
-/* -------------------------- ARREGLAR P PARA BODY Y OTRO PARA PORTFOLIO -------------*/
 p {
   margin: 0 0.2rem 2rem 1rem;
-}
-
-p.major {
   font-size: 1rem;
 }
 
@@ -207,6 +203,7 @@ header {
 /*---------------------------WELCOME---------------------------*/
 .welcome {
   height: 100vh;
+  margin: auto;
 }
 
 @media (min-width: 600px) {
@@ -218,18 +215,113 @@ header {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media (min-width: 1200px) {
+  .welcome {
+    max-width: 1200px;
   }
 }
 
 /*---------------------------Profile picture---------------------------*/
 .image {
-  border: 0;
   text-align: center;
+  margin: auto;
+  position: relative;
+}
+
+@media (min-width: 425px) {
+  .image {
+    /*Blur effect on the right*/
+    /*Blur effect on the left*/
+  }
+  .image:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0vw;
+    bottom: 0;
+    /*Blur effect fades in from the left*/
+    left: 60vw;
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), color-stop(90%, white));
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), white 90%);
+  }
+  .image:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 60vw;
+    bottom: 0;
+    left: 0vw;
+    background-image: -webkit-gradient(linear, right top, left top, from(rgba(255, 255, 255, 0)), color-stop(90%, white));
+    background-image: linear-gradient(to left, rgba(255, 255, 255, 0), white 90%);
+  }
+}
+
+@media (min-width: 460px) {
+  .image {
+    /*Blur effect on the right*/
+    /*Blur effect on the left*/
+  }
+  .image:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0vw;
+    bottom: 0;
+    /*Blur effect fades in from the left*/
+    left: 60vw;
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), color-stop(70%, white));
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), white 70%);
+  }
+  .image:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 60vw;
+    bottom: 0;
+    left: 0vw;
+    background-image: -webkit-gradient(linear, right top, left top, from(rgba(255, 255, 255, 0)), color-stop(70%, white));
+    background-image: linear-gradient(to left, rgba(255, 255, 255, 0), white 70%);
+  }
+}
+
+@media (min-width: 560px) {
+  .image {
+    /*Blur effect on the right*/
+    /*Blur effect on the left*/
+  }
+  .image:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0vw;
+    bottom: 0;
+    /*Blur effect fades in from the left*/
+    left: 60vw;
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), color-stop(60%, white));
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), white 60%);
+  }
+  .image:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 60vw;
+    bottom: 0;
+    left: 0vw;
+    background-image: -webkit-gradient(linear, right top, left top, from(rgba(255, 255, 255, 0)), color-stop(60%, white));
+    background-image: linear-gradient(to left, rgba(255, 255, 255, 0), white 60%);
+  }
 }
 
 @media (min-width: 600px) {
   .image {
     width: 50vw;
+    z-index: 2;
   }
 }
 
@@ -237,14 +329,22 @@ header {
   display: none;
 }
 
-.image img {
+.image img, .image picture {
   display: inline-block;
   width: auto;
   height: auto;
   max-height: 50vh;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
+}
+
+@media (min-width: 600px) {
+  .image img, .image picture {
+    -webkit-clip-path: circle(45% at 50% 50%);
+    clip-path: circle(45% at 50% 50%);
+    width: auto;
+    max-width: 50vw;
+    height: auto;
+    max-height: 60vh;
+  }
 }
 
 /*---------------------------Container---------------------------*/
@@ -252,7 +352,7 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100wh;
+  width: 100%;
   /*direction*/
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -264,24 +364,35 @@ header {
       -ms-flex-align: center;
           align-items: center;
   -webkit-align-items: center;
-}
-
-@media (min-width: 600px) {
-  .container {
-    width: 50vw;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .intro {
-  height: 50vh;
+  width: 50vh;
+}
+
+@media (min-width: 600px) {
+  .intro {
+    width: 50vw;
+  }
 }
 
 /*---------------------------ABOUT ME---------------------------*/
+.cv {
+  margin: auto;
+}
+
 .cv h2 {
   display: none;
+}
+
+@media (min-width: 1200px) {
+  .cv {
+    max-width: 1200px;
+  }
 }
 
 .cv-wrap {
@@ -454,6 +565,13 @@ progress[value]::-webkit-progress-value {
 /*---------------------------PROJECTS---------------------------*/
 .portfolio {
   height: auto;
+  margin: auto;
+}
+
+@media (min-width: 1200px) {
+  .portfolio {
+    width: 1200px;
+  }
 }
 
 @media (min-width: 600px) {
@@ -482,6 +600,13 @@ progress[value]::-webkit-progress-value {
 @media (min-width: 600px) {
   .project {
     width: 45vw;
+    margin: 5px 5px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .project {
+    width: 500px;
     margin: 5px 5px;
   }
 }

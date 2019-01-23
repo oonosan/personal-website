@@ -1,6 +1,11 @@
 /*---------------------------PROJECTS---------------------------*/
 .portfolio{
     height: auto;
+    margin: auto;
+
+    @include desktop{
+      width: 1200px;
+    }
   }
 
   .projects{
@@ -23,6 +28,11 @@
   
     @include tablet{
       width: 45vw;
+      margin: 5px 5px;
+    }
+
+    @include desktop{
+      width: 500px;      
       margin: 5px 5px;
     }
 

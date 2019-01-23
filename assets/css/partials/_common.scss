@@ -15,6 +15,7 @@
     margin: 0;
     padding: 0;
     border: 0px;
+    
   }
   
   /*---------------------------HEADERS---------------------------*/
@@ -45,14 +46,11 @@
       list-style: none;
     }
   
-  /* -------------------------- ARREGLAR P PARA BODY Y OTRO PARA PORTFOLIO -------------*/
   p {
     margin: 0 0.2rem 2rem 1rem;
-  }
-  
-  p.major {
     font-size: 1rem;
   }
+  
   
   /*---------------------------SEE MORE BUTTON---------------------------*/
 .button {
