@@ -224,7 +224,7 @@ header {
 /*---------------------------Profile picture---------------------------*/
 .image {
   border: 0;
-  display: inline-block;
+  text-align: center;
 }
 
 @media (min-width: 600px) {
@@ -238,8 +238,13 @@ header {
 }
 
 .image img {
-  display: block;
-  width: 100%;
+  display: inline-block;
+  width: auto;
+  height: auto;
+  max-height: 50vh;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 
 /*---------------------------Container---------------------------*/
@@ -268,6 +273,10 @@ header {
         -ms-flex-pack: center;
             justify-content: center;
   }
+}
+
+.intro {
+  height: 50vh;
 }
 
 /*---------------------------ABOUT ME---------------------------*/

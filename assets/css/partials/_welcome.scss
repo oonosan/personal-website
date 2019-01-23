@@ -11,7 +11,7 @@
   /*---------------------------Profile picture---------------------------*/
   .image {
     border: 0;
-    display: inline-block;
+    text-align:center;
 
     @include tablet{
       width:50vw;
@@ -20,10 +20,15 @@
     figcaption{
       display: none;
     }
-  
+    
     img {
-      display: block;
-      width: 100%;
+      display: inline-block;
+      width: auto;
+      height:auto;
+      max-height: 50vh;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
     }
   }
   
@@ -44,4 +49,8 @@
       width:50vw;
       justify-content: center;
     }
+  }
+
+  .intro{
+    height: 50vh;
   }
