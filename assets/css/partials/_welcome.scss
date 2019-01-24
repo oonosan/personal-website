@@ -1,7 +1,6 @@
 /*---------------------------WELCOME---------------------------*/
 .welcome {
     height: 100vh;
-    margin: auto;
 
     @include tablet{
       display: flex;
@@ -125,8 +124,7 @@
   /*---------------------------Container---------------------------*/
   .container {
     display: flex;
-    width: 100%;
-
+    
     /*direction*/
     flex-direction: column;
     -moz-flex-direction: column;
@@ -141,6 +139,12 @@
   }
 
   .intro{
+    margin: auto;
+    width: 80vw;
+    p{
+      text-align: center;
+    }
+
     width: 50vh;
       @include tablet{
         width:50vw;

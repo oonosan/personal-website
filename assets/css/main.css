@@ -203,7 +203,6 @@ header {
 /*---------------------------WELCOME---------------------------*/
 .welcome {
   height: 100vh;
-  margin: auto;
 }
 
 @media (min-width: 600px) {
@@ -352,7 +351,6 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
   /*direction*/
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -371,7 +369,13 @@ header {
 }
 
 .intro {
+  margin: auto;
+  width: 80vw;
   width: 50vh;
+}
+
+.intro p {
+  text-align: center;
 }
 
 @media (min-width: 600px) {
