@@ -44,6 +44,13 @@ $mobile2: 460px;
 $mobile3: 560px;
 $tablet: 600px;
 $desktop: 1200px;
+$small-height: 295px;
+
+@mixin smallH{
+  @media (max-height:#{$small-height}){
+    @content;
+  }
+}
 
 @mixin mobile {
   @media (min-width:#{$mobile}){
@@ -63,7 +70,7 @@ $desktop: 1200px;
   }
 }
 
-@mixin tablet {
+@mixin tablet{
   @media (min-width:#{$tablet}){
     @content;
   }

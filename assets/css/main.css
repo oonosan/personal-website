@@ -205,6 +205,12 @@ header {
   height: 100vh;
 }
 
+@media (max-height: 295px) {
+  .welcome {
+    height: auto;
+  }
+}
+
 @media (min-width: 600px) {
   .welcome {
     display: -webkit-box;
@@ -387,6 +393,8 @@ header {
 /*---------------------------ABOUT ME---------------------------*/
 .cv {
   margin: auto;
+  display: block;
+  border: 1px solid red;
 }
 
 .cv h2 {

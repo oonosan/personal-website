@@ -2,15 +2,19 @@
 .welcome {
     height: 100vh;
 
+    @include smallH{
+      height: auto;
+    }
+
     @include tablet{
       display: flex;
       flex-direction: row;
-      align-items: center;
+      align-items: center;      
     }
 
     @include desktop{
       max-width: 1200px;
-    }
+    }    
 }
 
   /*---------------------------Profile picture---------------------------*/
