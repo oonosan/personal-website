@@ -649,4 +649,9 @@ progress[value]::-webkit-progress-value {
       -ms-flex-align: center;
           align-items: center;
 }
+
+.fa-linkedin, .fa-github, .fa-envelope {
+  font-size: 2em;
+  color: gray;
+}
 /*# sourceMappingURL=main.css.map */
