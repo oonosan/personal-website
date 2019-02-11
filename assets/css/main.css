@@ -691,10 +691,11 @@ progress[value]::-webkit-progress-value {
 .project a {
   color: #ffffff;
   margin: 0px;
+  margin-right: 1em;
 }
 
 #project-wrap {
-  width: auto;
+  width: 100%;
 }
 
 @media (min-width: 600px) {

@@ -99,11 +99,12 @@
     a{
       color: color(project-link-color);
       margin: 0px;
+      margin-right: 1em;
     }
 }
 
 #project-wrap{
-  width: auto;
+  width: 100%;
 
   @include tablet{
     h2{
