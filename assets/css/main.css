@@ -607,6 +607,29 @@ progress[value]::-webkit-progress-value {
   }
 }
 
+#clock-project {
+  background-color: #827191;
+}
+
+#clock-project .image-projects {
+  background-image: url("../../../images/clock.jpg");
+  background-size: 200px;
+}
+
+@media (min-width: 600px) {
+  #clock-project .image-projects {
+    background-size: 160px;
+    clip-path: circle(30% at 50% 50%);
+    -webkit-clip-path: circle(30% at 50% 50%);
+  }
+}
+
+@media (min-width: 1200px) {
+  #clock-project .image-projects {
+    background-size: 180px;
+  }
+}
+
 .image-projects {
   height: 160px;
   background-position: center;
@@ -697,6 +720,6 @@ progress[value]::-webkit-progress-value {
 
 .fa-linkedin, .fa-github, .fa-envelope {
   font-size: 2em;
-  color: gray;
+  color: #605D5D;
 }
 /*# sourceMappingURL=main.css.map */

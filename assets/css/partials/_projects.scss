@@ -11,10 +11,6 @@
 
 #portfolio-project{
   background-color:#E0AFA0;
-  
-  // @include tablet{
-  //   background-color:#fff;
-  // }
 
   .image-projects{
     background-image: url("../../../images/Site-Icon/girl6b.png");
@@ -30,6 +26,25 @@
     background-size: 130px;
     }
   }
+}
+
+#clock-project{
+  background-color:#827191;
+  .image-projects{
+    background-image: url("../../../images/clock.jpg");
+    background-size: 200px;
+
+  @include tablet {
+    background-size: 160px;
+    clip-path: circle(30% at 50% 50%);
+    -webkit-clip-path: circle(30% at 50% 50%);
+  }
+
+  @include desktop{
+    background-size: 180px;
+    }
+  }
+
 }
 
 .image-projects{
@@ -94,8 +109,6 @@
     h2{
       text-transform: uppercase;
       text-align: left;
-      // margin-left: 1em;
     }
-
   }
 }
