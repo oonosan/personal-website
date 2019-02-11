@@ -584,22 +584,46 @@ progress[value]::-webkit-progress-value {
   }
 }
 
+#portfolio-project {
+  background-color: #E0AFA0;
+}
+
+#portfolio-project .image-projects {
+  background-image: url("../../../images/Site-Icon/girl6b.png");
+  background-size: 140px;
+}
+
 @media (min-width: 600px) {
-  .projects {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+  #portfolio-project .image-projects {
+    background-size: 120px;
+    clip-path: circle(30% at 50% 50%);
+    -webkit-clip-path: circle(30% at 50% 50%);
+  }
+}
+
+@media (min-width: 1200px) {
+  #portfolio-project .image-projects {
+    background-size: 130px;
+  }
+}
+
+.image-projects {
+  height: 160px;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-clip-path: circle(20% at 50% 50%);
+  clip-path: circle(20% at 50% 50%);
+}
+
+@media (min-width: 600px) {
+  .image-projects {
+    width: 20%;
   }
 }
 
 .project {
   width: 80vw;
-  min-height: 200px;
+  min-height: 160px;
   height: auto;
   margin: auto;
   margin-bottom: 10px;
@@ -607,16 +631,26 @@ progress[value]::-webkit-progress-value {
   text-align: center;
 }
 
+.project a {
+  text-transform: uppercase;
+  font-size: 1.2em;
+}
+
 @media (min-width: 600px) {
   .project {
-    width: 45vw;
+    width: 100%;
     margin: 5px 5px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
 }
 
 @media (min-width: 1200px) {
   .project {
-    width: 500px;
     margin: 5px 5px;
   }
 }
@@ -634,6 +668,17 @@ progress[value]::-webkit-progress-value {
 .project a {
   color: #ffffff;
   margin: 0px;
+}
+
+#project-wrap {
+  width: auto;
+}
+
+@media (min-width: 600px) {
+  #project-wrap h2 {
+    text-transform: uppercase;
+    text-align: left;
+  }
 }
 
 /*---------------------------CONTACT---------------------------*/

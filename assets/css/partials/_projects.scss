@@ -2,37 +2,72 @@
 .portfolio{
     height: auto;
     margin: auto;
-
+    
     @include desktop{
       width: 1200px;
     }
+}
+
+
+#portfolio-project{
+  background-color:#E0AFA0;
+  
+  // @include tablet{
+  //   background-color:#fff;
+  // }
+
+  .image-projects{
+    background-image: url("../../../images/Site-Icon/girl6b.png");
+    background-size: 140px;
+
+  @include tablet {
+    background-size: 120px;
+    clip-path: circle(30% at 50% 50%);
+    -webkit-clip-path: circle(30% at 50% 50%);
   }
 
-  .projects{
-    @include tablet{
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+  @include desktop{
+    background-size: 130px;
     }
-
   }
+}
 
-  .project{
+.image-projects{
+    height: 160px;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    -webkit-clip-path: circle(20% at 50% 50%);
+    clip-path: circle(20% at 50% 50%);
+
+    @include tablet{
+      width: 20%;      
+    }
+}
+
+.project{
     width: 80vw;
-    min-height: 200px;
+    min-height: 160px;
     height: auto;
     margin: auto;
     margin-bottom: 10px;
     padding-bottom: 10px;
     text-align: center;
   
+    a{
+      text-transform: uppercase;
+      font-size: 1.2em;
+    }
+
     @include tablet{
-      width: 45vw;
+      width: 100%;
       margin: 5px 5px;
+      
+      display: flex;
+      justify-content: flex-start;
     }
 
     @include desktop{
-      width: 500px;      
       margin: 5px 5px;
     }
 
@@ -50,4 +85,17 @@
       color: color(project-link-color);
       margin: 0px;
     }
+}
+
+#project-wrap{
+  width: auto;
+
+  @include tablet{
+    h2{
+      text-transform: uppercase;
+      text-align: left;
+      // margin-left: 1em;
+    }
+
   }
+}
