@@ -12,8 +12,9 @@ function mobileMenu() {
 
 /* HIGHLIGHT CURRENT SECTION IN NAVIGATION BAR */
 const sections = document.querySelectorAll("section");
-const navLi = document.querySelectorAll(".navbar .nav-menu .nav-item .nav-link");
+const navLi = document.querySelectorAll(".navbar .nav-menu .nav-item a");
 
+console.log(navLi);
 window.addEventListener("scroll", () => {
 	let current = "";
 	
