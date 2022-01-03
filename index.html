@@ -39,11 +39,11 @@
             <div class="nav-logo">
                 <h1>Ono</h1>
             </div>
-            
+
             <!-- Nav menu -->
             <ul class="nav-menu">
                 <li class="nav-item">
-                    <a class="nav-link home active" href="#home" aria-current="page">HOME</a>
+                    <a class="nav-link home active" href="#home">HOME</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link about" href="#about">ABOUT ME</a>
@@ -55,7 +55,7 @@
                     <a class="nav-link contact" href="#contact">CONTACT</a>
                 </li>
             </ul>
-            
+
             <!-- Burger menu -->
             <div class="burger-menu">
                 <div class="bar"></div>
@@ -64,20 +64,41 @@
             </div>
         </nav>
     </header>
-        <!-- END OF HEADER -->
-        
-    <div class="section-container">
-        <section class="home-section" id="home">HOME</section>
+    <!-- END OF HEADER -->
 
-        <section class="about-section" id="about">ABOUT ME<span class="top">&uarr;</span></section>
+    <div class="section-container" id="section-container">
+        <section class="home-section panel" id="home">
+            <div class="text">
+                <h3>HOME</h3>
+                <span>description</span></section>
+            </div>
+        </section>
 
-        <section class="projects-section" id="projects">PROJECTS<span class="top">&uarr;</span></section>
+        <section class="about-section panel" id="about">
+            <div class="text">
+                <h3>ABOUT ME</h3>
+                <span>description</span></section>
+            </div>
 
-        <section class="contact-section" id="contact">CONTACT<span class="top">&uarr;</span></section>
+        <section class="projects-section panel" id="projects">
+            <div class="text">
+                <h3>PROJECTS</h3>
+                <span>description</span></section>
+            </div>
+
+        <section class="contact-section panel" id="contact">
+            <div class="text">
+                <h3>CONTACT</h3>
+                <span>description</span></section>
+            </div>
     </div>
 
-
+    <div class="nav">
+        <button class="prev">prev</button>
+        <button class="next">next</button>
+    </div>
     <script src="js/script.js" type="text/javascript"></script>
+    <script src="js/burger-menu.js" type="text/javascript"></script>
 </body>
 
 </html>

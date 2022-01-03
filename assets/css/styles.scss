@@ -23,27 +23,18 @@ html {
     font-family: 'Poppins', sans-serif;
 }
 
-.flex {
-    display: flex;
-    gap: var(--gap, 2rem)
+body {
+    overflow: hidden;
 }
 
-/* CUSTOM SCROLLBAR */
-body::-webkit-scrollbar {
-    width: 0.25rem;
-}
-
-body::-webkit-scrollbar-track {
-    background: #1e1e24;
-}
-
-body::-webkit-scrollbar-thumb {
-    background: #6649b8;
-}
+/* ONE PAGE SCROLL */
 
 /* SECTIONS */
 .section-container {
-    height: 100vh;
+    position: relative;
+    overflow: hidden;
+
+    transition: 1s cubic-bezier(0.5, 0, 0.5, 1);
 }
 
 section {
@@ -51,6 +42,24 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.panel {
+    position: relative;
+    height: 100vh;
+}
+
+.text {
+    position: absolute;
+    left: 20%;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 0.5s 0.5s;
+}
+
+.text.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .home-section {
@@ -126,16 +135,17 @@ section {
         letter-spacing: 0.15rem;
         font-weight: bold;
         font-size: 0.9rem;
-		color: white;
+        color: white;
     }
 
-    .nav-link:hover, .nav-link.active {
+    .nav-link:hover,
+    .nav-link.active {
         color: #482ff7;
     }
 
-	.navbar .nav-menu .nav-item .nav-link.active a {
-		color: #482ff7;
-	}
+    .navbar .nav-menu .nav-item .nav-link.active a {
+        color: #482ff7;
+    }
 
     .burger-menu {
         display: none;
@@ -153,11 +163,11 @@ section {
 }
 
 .glass-effect {
-	background: rgba(255, 255, 255, 0.25);
-	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-	backdrop-filter: blur(7px);
-	-webkit-backdrop-filter: blur(7px);
-	border: 1px solid rgba(255, 255, 255, 0.18);
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 /* Mobile Styles */
@@ -174,10 +184,10 @@ section {
         box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
 
         background: rgba(255, 255, 255, 0.25);
-		box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-		backdrop-filter: blur(7px);
-		-webkit-backdrop-filter: blur(7px);
-		border: 1px solid rgba(255, 255, 255, 0.18);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        backdrop-filter: blur(7px);
+        -webkit-backdrop-filter: blur(7px);
+        border: 1px solid rgba(255, 255, 255, 0.18);
     }
 
     .nav-menu.active {

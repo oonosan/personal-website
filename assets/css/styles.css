@@ -19,29 +19,17 @@ html {
   font-family: 'Poppins', sans-serif;
 }
 
-.flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: var(--gap, 2rem);
+body {
+  overflow: hidden;
 }
 
-/* CUSTOM SCROLLBAR */
-body::-webkit-scrollbar {
-  width: 0.25rem;
-}
-
-body::-webkit-scrollbar-track {
-  background: #1e1e24;
-}
-
-body::-webkit-scrollbar-thumb {
-  background: #6649b8;
-}
-
+/* ONE PAGE SCROLL */
 /* SECTIONS */
 .section-container {
-  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: 1s cubic-bezier(0.5, 0, 0.5, 1);
+  transition: 1s cubic-bezier(0.5, 0, 0.5, 1);
 }
 
 section {
@@ -55,6 +43,27 @@ section {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.panel {
+  position: relative;
+  height: 100vh;
+}
+
+.text {
+  position: absolute;
+  left: 20%;
+  opacity: 0;
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+  -webkit-transition: all 0.5s 0.5s;
+  transition: all 0.5s 0.5s;
+}
+
+.text.show {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 
 .home-section {
@@ -145,7 +154,8 @@ section {
   color: white;
 }
 
-.navbar .nav-link:hover, .navbar .nav-link.active {
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
   color: #482ff7;
 }
 
