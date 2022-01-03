@@ -45,11 +45,6 @@ section {
           justify-content: center;
 }
 
-.panel {
-  position: relative;
-  height: 100vh;
-}
-
 .text {
   position: absolute;
   left: 20%;
@@ -64,6 +59,10 @@ section {
   opacity: 1;
   -webkit-transform: translateY(0);
           transform: translateY(0);
+}
+
+.prev, .next {
+  opacity: 0;
 }
 
 .home-section {
