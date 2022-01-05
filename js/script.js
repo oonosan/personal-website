@@ -56,6 +56,7 @@ prev.addEventListener('click', () => {
 	toggleText(index, 'hide');
 	index--;
 	navBarClass(index);
+
 	content.forEach((section, i) => {
 		if (i === index) {
 			toggleText(i, 'show');
@@ -70,6 +71,7 @@ next.addEventListener('click', () => {
 	toggleText(index, 'hide');
 	index++;
 	navBarClass(index);
+	
 	content.forEach((section, i) => {
 		if (i === index) {
 			toggleText(i, 'show');
@@ -118,3 +120,13 @@ document.addEventListener('wheel', event => {
 
 	lastAnimation = timeNow;
 }, { passive: false }); 
+
+function knowMoreButton() {
+	var event = new Event('click');
+	next.dispatchEvent(event);
+}
+
+function seeProjectsButton() {
+	var event = new Event('click');
+	next.dispatchEvent(event);
+}

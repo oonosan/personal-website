@@ -24,7 +24,8 @@
 
     <!-- Styles -->
     <link href="assets/css/styles.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <!-- Favicon  -->
     <link rel="icon" href="img/icon.png">
@@ -37,7 +38,7 @@
         <nav class="navbar glass-effect">
             <!-- Image Logo -->
             <div class="nav-logo">
-                <h1>Ono</h1>
+                <h1 class="logo"><a href="#home">Ono</a></h1>
             </div>
 
             <!-- Nav menu -->
@@ -67,35 +68,91 @@
     <!-- END OF HEADER -->
 
     <div class="section-container" id="section-container">
+        <!-- HOME SECTION -->
         <section class="home-section" id="home">
             <div class="text">
-                <h3>HOME</h3>
-                <span>description</span></section>
+                <h2 class="title">Welcome!</h2>
+                <p class="home-subtitle">I'M KAREN ONO</p>
+                <p class="home-description">a Full-stack software developer. Welcome to my personal website</p>
+
+                <div class="know-more">
+                    <a class="redirect" onclick="knowMoreButton()">KNOW MORE ABOUT ME</a>
+                    <svg class="arrow-circle-down bounce" onclick="knowMoreButton()" viewbox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1412 897q0-27-18-45l-91-91q-18-18-45-18t-45 18l-189 189v-502q0-26-19-45t-45-19h-128q-26 0-45 19t-19 45v502l-189-189q-19-19-45-19t-45 19l-91 91q-18 18-18 45t18 45l362 362 91 91q18 18 45 18t45-18l91-91 362-362q18-18 18-45zm252-1q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z" fill="#fff"></path>
+                    </svg>
+                </div>
             </div>
         </section>
 
+        <!-- ABOUT SECTION -->
         <section class="about-section" id="about">
             <div class="text">
-                <h3>ABOUT ME</h3>
-                <span>description</span></section>
-            </div>
+                <h2 class="section-title">ABOUT ME</h2>
+                <div class="description-container">
+                    <div class="avatar">
+                        <a href="https://github.com/oonosan">
+                            <img src="img/profile.jpg" alt="Karen Ono" />
+                        </a>
+                    </div>
+                    <span class="about-me-description">
+                        I'm a software developer. I'd been working about 3 years with .NET and about 1.5 years with Angular.
+                        I like coding applying good programming practices. I'm a problem solving fan and consider programming languages as a tool.
+                        I'm always looking forward to improve myself professionally.
+                        These are my skills:
+                    </span>
+                </div>
+                
+                <div class="skills-list">
+                    <ul>
+                        <li>.NET Core C#</li>
+                        <li>ASP.NET MVC, ASP.NET Web API, ASP.NET Web Pages</li>
+                        <li>LINQ, Entity Framework</li>
+                        <li>PostgreSQL, Microsoft SQL Server, MongoDB</li>
+                        <li>Angular</li>
+                        <li>HTML5, CSS3, Sass, JavaScript (ES6)</li>
+                        <li>Git</li>
+                    </ul>
 
+                    <img class="illustration" src="img/illustration.png">
+                </div>
+                
+
+                <div class="see-projects">
+                    <a class="redirect" onclick="seeProjectsButton()">SEE MY PERSONAL PROJECTS</a>
+                    <svg class="arrow-circle-down bounce" onclick="seeProjectsButton()" viewbox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1412 897q0-27-18-45l-91-91q-18-18-45-18t-45 18l-189 189v-502q0-26-19-45t-45-19h-128q-26 0-45 19t-19 45v502l-189-189q-19-19-45-19t-45 19l-91 91q-18 18-18 45t18 45l362 362 91 91q18 18 45 18t45-18l91-91 362-362q18-18 18-45zm252-1q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z" fill="#fff"></path>
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS SECTION -->
         <section class="projects-section" id="projects">
             <div class="text">
-                <h3>PROJECTS</h3>
-                <span>description</span></section>
+                <h2 class="section-title">Projects</h2>
+                <div class="description-container">
+                    <span class="about-me-description">
+                        I'm a software developer. I'd been working about 3 years with .NET and about 1.5 years with Angular.
+                        I like coding applying good programming practices. I'm a problem solving fan and consider programming languages as a tool.
+                        I'm always looking forward to improve myself professionally.
+                        These are my skills:
+                    </span>
+                </div>
             </div>
+        </section>
 
+        <!-- CONTACT SECTION -->
         <section class="contact-section" id="contact">
             <div class="text">
                 <h3>CONTACT</h3>
-                <span>description</span></section>
+                <span>description</span>
             </div>
+        </section>
     </div>
 
     <div class="nav">
-        <button class="prev">prev</button>
-        <button class="next">next</button>
+        <button class="prev"></button>
+        <button class="next"></button>
     </div>
     <script src="js/script.js" type="text/javascript"></script>
     <script src="js/burger-menu.js" type="text/javascript"></script>
